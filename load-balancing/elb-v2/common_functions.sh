@@ -471,8 +471,8 @@ reset_waiter_timeout() {
         return 1;
     fi
 
-    # Base register/deregister action may take up to about 30 seconds
-    timeout=$((timeout + 30))
+    # Base register/deregister action may take up to about 180 seconds
+    timeout=$((timeout + 180))
     msg "The current wait time out is set to $timeout second(s)"
     WAITER_ATTEMPTS=$((timeout / WAITER_INTERVAL_ALB))
 }
